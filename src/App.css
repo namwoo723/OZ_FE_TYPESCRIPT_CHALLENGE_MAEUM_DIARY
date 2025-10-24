@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app-wrapper {
+  width: 100%;
+  max-width: 750px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.app-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #4e5968;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.emotion-form {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+}
+
+.emotion-options {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.emotion-options input[type='radio'] {
+  appearance: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.emotion-options input[type='radio']:checked + label {
+  outline: 2px solid #ffc338;
+  border-radius: 6px;
+  outline-offset: 2px;
+}
+
+.emotion-options label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.emotion-options label:hover {
+  transform: scale(1.1);
+}
+
+textarea {
+  padding: 0.75rem;
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  background-color: #f0f0f0;
+  resize: none;
+  box-sizing: border-box;
+}
+
+textarea::placeholder {
+  color: #888;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: #ffc338;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  outline: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background-color: #ffb338;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li.item {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+}
+
+li div:first-child {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+li .date {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filterButton {
+  background-color: #e1e1e1;
+  color: #333;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filterButton.active {
+  background-color: #fff9ea;
+  color: #ffc338;
+  border: 1px solid #ffc338;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  margin: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
