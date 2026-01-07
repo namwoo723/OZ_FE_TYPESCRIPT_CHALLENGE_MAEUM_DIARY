@@ -24,7 +24,16 @@ export default function EmotionForm({ onAdd }: Props) {
 
     // 일기를 기록하고, 입력을 초기화하세요.
     // HINT: onAdd, setNote
+    const newEmotion: Emotion = {
+      id: Date(),
+      emotion: selected,
+      note,
+      date: Date(),
+    }
+    onAdd(newEmotion);
+    setNote("");
   };
+
 
   return (
     <form onSubmit={handleSubmit} className="emotion-form">
