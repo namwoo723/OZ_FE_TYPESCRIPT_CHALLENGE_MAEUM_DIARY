@@ -10,6 +10,7 @@ interface Props {
 export default function EmotionList({ list, filter, onFilterChange }: Props) {
   // TODO 1: 필터링된 감정 리스트를 filtered라는 변수에 담아보세요.
   // const filtered = /* filter === 'all' ? list : ...
+  const filtered = filter === "all" ? list : list.filter((item) => item.emotion === filter);
 
   return (
     <div className="emotion-list">
@@ -39,6 +40,19 @@ export default function EmotionList({ list, filter, onFilterChange }: Props) {
         - filtered.length === 0 이면 <p className="empty">기록이 없습니다!</p>
         - 아니면 <ul>...</ul>
       */}
+      {filtered.length === 0 ? (
+        <p className="empty">기록이 없습니다</p>
+      ) : ( 
+        <ul>
+          {filtered.map((item) => (
+            <li key = {item.id}>
+              <span>{emotionIcons[item.emotion]}</span>
+              <span>{item.date}</span>
+              <p>{item.note}</p>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
